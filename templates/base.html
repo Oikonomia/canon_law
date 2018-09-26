@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{% block title %}{% endblock %} - canonlaw@oikonomia</title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='style.css') }}" />
+    <!--<script src="main.js"></script>-->
+</head>
+
+<body>
+    <nav>
+        <img src="{{ url_for('static', filename='logo.png') }}" height="150px">
+    </nav>
+
+    <div id="list2">
+        <ol>
+            <li>
+                <p><em>The Netherlands</em> is a country in ...</p>
+            </li>
+            <li>
+                <p><em>The United States of America</em> is a federal constitutional ...</p>
+            </li>
+            <li>
+                <p><em>The Philippines</em> officially known as the Republic ...</p>
+            </li>
+            <li>
+                <p><em>The United Kingdom</em> of Great Britain and ...</p>
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html>
