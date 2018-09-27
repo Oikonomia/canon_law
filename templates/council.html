@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block main %}
+<img src="{{ url_for('static', filename='logo.png') }}" height="200px">
+<h1>{{ name }}</h1>
+<p>
+    {% if obj.history %}
+    {{ obj.history }}
+    {% endif %}
+
+    <table>
+        <tr>
+            <th>canon</th>
+            <th>text</th>
+        </tr>
+        {% for canon in obj.canons %}
+        <tr>
+            <td style="text-align: center"><a href="#{{ canon.canon }}">{{ canon.canon }}</a></td>
+            <td id="{{ canon.canon }}">{{ canon.text }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</p>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}{% if query %}search results for "{{ query }}"{% else %}search results for literally nothing{% endif %}{% endblock %}
+
+{% block main %}
+<img src="{{ url_for('static', filename='logo.png') }}" height="200px">
+{% if query %}
+<h1>search results for "{{ query }}"</h1>
+<p>
+    Search isn't quite ready yet. Check back soon for updates.
+
+    <br><br>
+
+    Here's a cat/shaq gif for wasting your time:
+
+    <br><br>
+
+    <iframe style="display: block;margin: 0 auto;" src="https://giphy.com/embed/nNxT5qXR02FOM" width="480" height="399" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</p>
+{% else %}
+<h1>why would you search for nothing?</h1>
+<p style="text-align: center">
+    well, since you're here, have a cat gif:
+
+    <br><br>
+
+    <iframe style="display: block;margin: 0 auto;" src="https://giphy.com/embed/33OrjzUFwkwEg" width="480" height="399" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+    <br><br>
+
+    <small>if you're here because of the easter egg riddle, then congratulations.</small>
+</p>
+{% endif %}
+{% endblock %}

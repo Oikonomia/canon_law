@@ -19,7 +19,7 @@
 import os
 import flask
 
-from . import central
+from canon_law import central
 
 
 def create_app(self):

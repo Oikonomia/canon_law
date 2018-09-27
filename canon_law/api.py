@@ -19,9 +19,14 @@
 import flask
 import tinydb
 
-from . import central
+from canon_law import central
 
 bp = flask.Blueprint("api", __name__, url_prefix="/api")
+
+
+@bp.route("/")
+def index():
+    return flask.render_template("api.html")
 
 
 @bp.route("/council/")

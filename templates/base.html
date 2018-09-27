@@ -1,6 +1,44 @@
 <!DOCTYPE html>
 <html>
 
+<!--
+                     ▄▓█∩              ▄▓               ║█▄,    ,               
+               █▌  ▄███▌            '▀█▓╓█▀²            ░███▓  ╓█▄              
+              ╟██U▐███▀∩         ,    ██╟█¬   ▄          ╚████ ███              
+              ███▌█▀▀▒▄         ,▀▓▓▓▓██╟██▓▓▓█▌         ╔▄▒▀█║███░             
+            ▄ ███▌▄▓██▌         ▀▀▄▓▓▓▓▓(▓▓▓▓▓▄▀^        ▐███▓░███∩             
+           ]█▌╙▀▒▓████∩          ▀▌   ██╟█─   ▀^          ╚████░▀░╓█▌           
+           ╟██▌ ▐███▒                 ██╟█                 ░▀███ ╒███∩          
+           ╟███ ╙▒▓▌    ┌█            ██▐█¬           ▐▄    ┌▓▓░ ████∩          
+         . ╙███░▓██▌   ▄▄▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀╙▀▀▀▀▀▀▀▀▀▀▀▀▀▀▄▓⌐  ⌡███▄╟██░ ,         
+         ╟█▓░╚░████∩    ╓█▀▀▀▀▀▀▀▀▀▀▀▀██╟█▀▀▀▀▀▀▀▀▀▀▀▀█▓`    ╟███▌▀░▄██         
+         ░███▌▐███▒µ     ^            ██▐█            ╘'     ▓▒██▌╓███▌         
+          ║███▌░░▓█▌                  ██▐█                  ]██▌░░████∩         
+         ,,╚▀█▌ ███▌             ╓L   ██▐█                  ▐███µ⌡██▒░,,        
+        "▀███▓∩]███░,            ▀█▄, ██▐█                  '███▌ ▄▓███░        
+         └╠████▌██▒▓█           ▀▀▄█▀███╟█                 ╫█░▀█░█████░         
+          ,▒▒▀█▀░ ███U           ╟██▓▄▀█╟█▄                ███⌐"╟█▀▀▒Q,         
+          ║███▓▓ ▐███▌╟█          ^ `▀█▓╓▀█▓▄▐▓         á█ ███▌ ▄▓████░         
+           ░█████░███░██▌             ██▐█▓▄▀██▄       ]██▌║██▌▓████▒∩          
+             ░▒██░╚▒░╟███░█▌          ██▐█¬▀██▄▀^   ▄█▌╫███∩░▀░██▒▒░            
+             ╚██████▄║███░███         ██▐█   ⌠█    ▓██▌║██▌,▓█████▀∩            
+              └╚▀████░╠▀░└████▐▓▄▄    ██▐█    ╓▄▄▓▐███░ ╠▀░████▀▒░              
+                 .▓▓▓██▓▓Q╚███░▀████  ██▐█  ▄████░║██▀ ▄▓███▓▓▄                 
+                  ░▀██████░░▒░  ╠████ ██▐█ ╫███▀░ '█░ ██████▀▒░                 
+                     ╙╙░▒▓█████▓ ╙▒▀▀░████ ▀▀▒░ f█████▓▓▒╙╙                     
+                       ░▀▀███▀▒▒▓████▓████4████▓▄▒▀████▀▀                       
+                           ' «███████▓██╙█▄███████▌ '                           
+                              "╙╙╙╙'  `▀█~'  ╙╙╙╙"                              
+
+Well, aren't you inquisitive?
+
+If code's your thing, consider helping us out on GitHub: https://github.com/Oikonomia/canon_law
+
+There's a little easter egg in the website. Here's a riddle on how to find it:
+Sometimes a man must look for nothing to find everything.
+
+-->
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,30 +47,55 @@
     <title>{% block title %}{% endblock %} - canonlaw@oikonomia</title>
 
     <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='logo.png') }}" />
     <!--<script src="main.js"></script>-->
 </head>
 
 <body>
-    <nav>
-        <img src="{{ url_for('static', filename='logo.png') }}" height="150px">
-    </nav>
+    <header>
+        <h1><a href="{{ url_for('frontend.index') }}">canonlaw@oikonomia</a></h1>
+        <ul>
+            <li><a href="{{ url_for('frontend.index') }}">home</a></li>
+            <li><a href="{{ url_for('frontend.apostles') }}">canons of the apostles</a></li>
+            <li class="dropdown">
+                <a class="dropbtn">ecumenical councils</a>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('frontend.f_nicea') }}">first council of nicea (325)</a>
+                    <a href="{{ url_for('frontend.f_const') }}">first council of constantinople (381)</a>
+                    <a href="{{ url_for('frontend.ephesus') }}">council of ephesus (431)</a>
+                    <a href="#">council of chalcedon (451)</a>
+                    <a href="#">second council of constantinople (553)</a>
+                    <a href="#">third council of constantinople (680-681)</a>
+                    <a href="#">council of trullo (quinisext) (692)</a>
+                    <a href="#">second council of nicea (787)</a>
+                    <a href="#" class="separator">
+                        <hr>
+                    </a>
+                    <a href="#">fourth council of constantinople (879-880)</a>
+                    <a href="#">fifth council of constantinople (1341-1351)</a>
+                </div>
+            </li>
+            <li><a href="#">local councils</a></li>
+            <li><a href="#">church fathers</a></li>
+            <li><a href="{{ url_for('api.index') }}">api</a></li>
+            <li style="float: right;">
+                <form role="search" method="POST" action="{{ url_for('frontend.search') }}">
+                    <input type="search" id="canon-search" name="query" placeholder="search query">
+                    <button>search</button>
+                </form>
+            </li>
+        </ul>
+    </header>
 
-    <div id="list2">
-        <ol>
-            <li>
-                <p><em>The Netherlands</em> is a country in ...</p>
-            </li>
-            <li>
-                <p><em>The United States of America</em> is a federal constitutional ...</p>
-            </li>
-            <li>
-                <p><em>The Philippines</em> officially known as the Republic ...</p>
-            </li>
-            <li>
-                <p><em>The United Kingdom</em> of Great Britain and ...</p>
-            </li>
-        </ol>
+    <div class="main">
+        {% block main %}{% endblock %}
     </div>
+
+    <footer>
+        canonlaw@oikonomia is made with ❤️ by <a href="https://oikonomia.faith">Oikonomia, an Orthodox Christian community</a>.
+        <br>
+        <a href="{{ url_for('frontend.about') }}">about</a> &middot; <a href="{{ url_for('frontend.disclaimer') }}">disclaimer</a> &middot; <a href="https://github.com/Oikonomia/canon_law">source code</a> &middot; <a href="#">additional resources</a>
+    </footer>
 </body>
 
 </html>

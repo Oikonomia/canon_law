@@ -1,1 +1,17 @@
 {% extends "base.html" %}
+
+{% block title %}home{% endblock %}
+
+{% block main %}
+<img src="{{ url_for('static', filename='logo.png') }}" height="200px">
+<h1>welcome.</h1>
+<p>By making an intuitive website, as well as a <a href="#">open, fully-featured API</a>, we hope to make Orthodox
+    canon law more accessible to everyone.</p>
+<p>There are many things we hope to achieve or provide the means for by making canon law accessible:</p>
+<ul>
+    <li>Allowing Orthodox Christians to become more informed on canon law.</li>
+    <li>Making referencing canon law easier for laity and clergy alike.</li>
+    <li>Providing more transparency to some of the ways our clergy may operate.</li>
+    <li>Encouraging Orthodox Christians to create more open-source and developer-friendly resources.</li>
+</ul>
+{% endblock %}

@@ -21,7 +21,7 @@ import tinydb
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-from .extensions.vylogger import VyLogger
+from canon_law.extensions.vylogger import VyLogger
 
 logger = VyLogger("default")
 
@@ -39,3 +39,28 @@ def log_message(level, sender, source, msg):
         logger.info(message)
     elif level == "debug":
         logger.debug(message)
+
+
+def import_dataset(file_name, history=None):
+    name = file_name
+    dataset = open(f"{dir_path}/datasets/{name}.txt")
+    lines = dataset.readlines()
+    canons = []
+
+    for line in lines:
+        split = line.split(" - ")
+        canon = int(split[0])
+        text = split[1]
+
+        canons.append({"canon": canon, "text": text})
+
+    if history is None:
+        history = ""
+
+    db.insert({"name": name, "history": history, "canons": canons})
+
+    print("Done.")
+
+
+def search_canons(query):
+    return "nope."
