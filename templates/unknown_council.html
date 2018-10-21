@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}error 404: council not found{% endblock %}
+
+{% block main %}
+<img src="{{ url_for('static', filename='logo.png') }}" height="200px">
+<h1>error 404: council not found</h1>
+<h3 style="text-align: center;">
+    This council isn't real. Well... rather, it isn't available here, whatever it is.
+
+    <br><br>
+
+    Wanna try a <a href="{{ url_for('frontend.council', council=random_council) }}">random council</a>?
+</h3>
+{% endblock %}

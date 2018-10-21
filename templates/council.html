@@ -4,7 +4,9 @@
 
 {% block main %}
 <img src="{{ url_for('static', filename='logo.png') }}" height="200px">
-<h1>{{ name }}</h1>
+<h1>{{ title }}</h1>
+{% if not obj.no_canons %}
+{% autoescape false %}
 <p>
     {% if obj.history %}
     {{ obj.history }}
@@ -23,4 +25,10 @@
         {% endfor %}
     </table>
 </p>
+{% endautoescape %}
+{% else %}
+<h3 style="text-align: center;">
+    This council has no canons.
+</h3>
+{% endif %}
 {% endblock %}

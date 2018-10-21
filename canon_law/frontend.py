@@ -18,10 +18,22 @@
 
 import flask
 import tinydb
+import random
 
 from canon_law import central
 
 bp = flask.Blueprint("frontend", __name__)
+
+page_titles = {
+    "apostles": "canons of the apostles",
+    "1nicea": "first council of nicea (325)",
+    "1const": "first council of constantinople (381)",
+    "ephesus": "council of ephesus (431)",
+    "chalcedon": "council of chalcedon (451)",
+    "2const": "second council of constantinople (553)",
+    "3const": "third council of constantinople (680-681)",
+    "trullo": "council of trullo (quinisext) (692)"
+}
 
 
 @bp.route("/")
@@ -29,48 +41,22 @@ def index():
     return flask.render_template("index.html")
 
 
-@bp.route("/apostles/")
-def apostles():
-    title = "canons of the apostles"
+@bp.route("/c/<council>/")
+def council(council=None):
+    if council in page_titles.keys():
+        title = page_titles[council]
 
-    query = tinydb.Query()
+        query = tinydb.Query()
 
-    obj = central.db.search(query.name == "apostles")[0]
+        obj = central.db.search(query.name == council)[0]
 
-    return flask.render_template("council.html", title=title, name=title, obj=obj)
+        return flask.render_template("council.html", title=title, obj=obj)
+    else:
+        random_index = random.randint(0, (len(page_titles.keys()) - 1))
 
+        random_council = list(page_titles.keys())[random_index]
 
-@bp.route("/1nicea/")
-def f_nicea():
-    title = "first council of nicea (325)"
-
-    query = tinydb.Query()
-
-    obj = central.db.search(query.name == "1nicea")[0]
-
-    return flask.render_template("council.html", title=title, name=title, obj=obj)
-
-
-@bp.route("/1const/")
-def f_const():
-    title = "first council of constantinople (381)"
-
-    query = tinydb.Query()
-
-    obj = central.db.search(query.name == "1const")[0]
-
-    return flask.render_template("council.html", title=title, name=title, obj=obj)
-
-
-@bp.route("/ephesus/")
-def ephesus():
-    title = "council of ephesus (431)"
-
-    query = tinydb.Query()
-
-    obj = central.db.search(query.name == "ephesus")[0]
-
-    return flask.render_template("council.html", title=title, name=title, obj=obj)
+        return flask.render_template("unknown_council.html", random_council=random_council)
 
 
 @bp.route("/search/", methods=["GET", "POST"])
