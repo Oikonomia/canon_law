@@ -2,37 +2,10 @@
 <html>
 
 <!--
-                     ▄▓█∩              ▄▓               ║█▄,    ,               
-               █▌  ▄███▌            '▀█▓╓█▀²            ░███▓  ╓█▄              
-              ╟██U▐███▀∩         ,    ██╟█¬   ▄          ╚████ ███              
-              ███▌█▀▀▒▄         ,▀▓▓▓▓██╟██▓▓▓█▌         ╔▄▒▀█║███░             
-            ▄ ███▌▄▓██▌         ▀▀▄▓▓▓▓▓(▓▓▓▓▓▄▀^        ▐███▓░███∩             
-           ]█▌╙▀▒▓████∩          ▀▌   ██╟█─   ▀^          ╚████░▀░╓█▌           
-           ╟██▌ ▐███▒                 ██╟█                 ░▀███ ╒███∩          
-           ╟███ ╙▒▓▌    ┌█            ██▐█¬           ▐▄    ┌▓▓░ ████∩          
-         . ╙███░▓██▌   ▄▄▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀╙▀▀▀▀▀▀▀▀▀▀▀▀▀▀▄▓⌐  ⌡███▄╟██░ ,         
-         ╟█▓░╚░████∩    ╓█▀▀▀▀▀▀▀▀▀▀▀▀██╟█▀▀▀▀▀▀▀▀▀▀▀▀█▓`    ╟███▌▀░▄██         
-         ░███▌▐███▒µ     ^            ██▐█            ╘'     ▓▒██▌╓███▌         
-          ║███▌░░▓█▌                  ██▐█                  ]██▌░░████∩         
-         ,,╚▀█▌ ███▌             ╓L   ██▐█                  ▐███µ⌡██▒░,,        
-        "▀███▓∩]███░,            ▀█▄, ██▐█                  '███▌ ▄▓███░        
-         └╠████▌██▒▓█           ▀▀▄█▀███╟█                 ╫█░▀█░█████░         
-          ,▒▒▀█▀░ ███U           ╟██▓▄▀█╟█▄                ███⌐"╟█▀▀▒Q,         
-          ║███▓▓ ▐███▌╟█          ^ `▀█▓╓▀█▓▄▐▓         á█ ███▌ ▄▓████░         
-           ░█████░███░██▌             ██▐█▓▄▀██▄       ]██▌║██▌▓████▒∩          
-             ░▒██░╚▒░╟███░█▌          ██▐█¬▀██▄▀^   ▄█▌╫███∩░▀░██▒▒░            
-             ╚██████▄║███░███         ██▐█   ⌠█    ▓██▌║██▌,▓█████▀∩            
-              └╚▀████░╠▀░└████▐▓▄▄    ██▐█    ╓▄▄▓▐███░ ╠▀░████▀▒░              
-                 .▓▓▓██▓▓Q╚███░▀████  ██▐█  ▄████░║██▀ ▄▓███▓▓▄                 
-                  ░▀██████░░▒░  ╠████ ██▐█ ╫███▀░ '█░ ██████▀▒░                 
-                     ╙╙░▒▓█████▓ ╙▒▀▀░████ ▀▀▒░ f█████▓▓▒╙╙                     
-                       ░▀▀███▀▒▒▓████▓████4████▓▄▒▀████▀▀                       
-                           ' «███████▓██╙█▄███████▌ '                           
-                              "╙╙╙╙'  `▀█~'  ╙╙╙╙"                              
 
 Well, aren't you inquisitive?
 
-If code's your thing, consider helping us out on GitHub: https://github.com/Oikonomia/canon_law
+If code's your thing, consider helping me out on GitHub: https://github.com/vypr/canon_law
 
 There's a little easter egg in the website. Here's a riddle on how to find it:
 Sometimes a man must look for nothing to find everything.
@@ -44,7 +17,7 @@ Sometimes a man must look for nothing to find everything.
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>{% block title %}{% endblock %} - canonlaw@oikonomia</title>
+    <title>{% block title %}{% endblock %} - canonlaw.vypr.xyz</title>
 
     <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='style.css') }}" />
     <link rel="shortcut icon" href="{{ url_for('static', filename='logo.png') }}" />
@@ -53,7 +26,7 @@ Sometimes a man must look for nothing to find everything.
 
 <body>
     <header>
-        <h1><a href="{{ url_for('frontend.index') }}">canonlaw@oikonomia</a></h1>
+        <h1><a href="{{ url_for('frontend.index') }}">canonlaw.vypr.xyz</a></h1>
         <ul>
             <li><a href="{{ url_for('frontend.index') }}">home</a></li>
             <li><a href="{{ url_for('frontend.council', council='apostles') }}">canons of the apostles</a></li>
@@ -92,7 +65,7 @@ Sometimes a man must look for nothing to find everything.
     </div>
 
     <footer>
-        canonlaw@oikonomia is made with ❤️ by <a href="https://oikonomia.faith">Oikonomia, an Orthodox Christian community</a>.
+        canonlaw.vypr.xyz is made with ❤️ by <a href="https://vypr.xyz">Elliott Pardee</a>.
         <br>
         <a href="{{ url_for('frontend.about') }}">about</a> &middot; <a href="{{ url_for('frontend.disclaimer') }}">disclaimer</a> &middot; <a href="https://github.com/Oikonomia/canon_law">source code</a> &middot; <a href="#">additional resources</a>
     </footer>
