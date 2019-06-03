@@ -42,7 +42,7 @@ def index():
 
 
 @bp.route("/c/<council>/")
-def council(council=None):
+def read_council(council=None):
     if council in page_titles.keys():
         title = page_titles[council]
 

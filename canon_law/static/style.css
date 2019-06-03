@@ -75,9 +75,9 @@ input { padding: 10px; }
 header .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #e0e0e0;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
 }
 
@@ -90,19 +90,16 @@ header .dropdown-content a {
 }
 
 header .dropdown-content a:hover { color: black !important; }
-header .dropdown-content a:hover { background-color: #f1f1f1; }
+header .dropdown-content a:hover { background-color: #c8c8c8; }
 header .dropdown:hover .dropdown-content { display: block; }
 
 header .separator:hover {
-    background-color: #f9f9f9 !important;
+    background-color: #e0e0e0 !important;
     cursor: default;
 }
 
 .main {
-    margin-top: 10px;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-bottom: 50px;
+    margin: 10px 25% 50px;
 
     /* hacky way of making the footer stick to the bottom */
     /* only because i don't think it appropriate to add a surrounding div to everything */
@@ -136,12 +133,12 @@ table {
 }
 
 table, th, td {
-    border: 1px solid #e0e0e0;
+    border: 1px solid #c8c8c8;
     border-collapse: collapse;
 }
 
 th, td { padding: 15px; }
-tr:nth-child(even) { background-color: #fcfcfc; }
+tr:nth-child(even) { background-color: #e0e0e0; }
 
 small { font-size: 11px; }
 

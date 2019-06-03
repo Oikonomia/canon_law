@@ -29,16 +29,16 @@ Sometimes a man must look for nothing to find everything.
         <h1><a href="{{ url_for('frontend.index') }}">canonlaw.vypr.xyz</a></h1>
         <ul>
             <li><a href="{{ url_for('frontend.index') }}">home</a></li>
-            <li><a href="{{ url_for('frontend.council', council='apostles') }}">canons of the apostles</a></li>
+            <li><a href="{{ url_for('frontend.read_council', council='apostles') }}">canons of the apostles</a></li>
             <li class="dropdown">
                 <a class="dropbtn">ecumenical councils</a>
                 <div class="dropdown-content">
-                    <a href="{{ url_for('frontend.council', council='1nicea') }}">first council of nicea (325)</a>
-                    <a href="{{ url_for('frontend.council', council='1const') }}">first council of constantinople (381)</a>
-                    <a href="{{ url_for('frontend.council', council='ephesus') }}">council of ephesus (431)</a>
-                    <a href="{{ url_for('frontend.council', council='chalcedon') }}">council of chalcedon (451)</a>
-                    <a href="{{ url_for('frontend.council', council='2const') }}">second council of constantinople (553)</a>
-                    <a href="{{ url_for('frontend.council', council='3const') }}">third council of constantinople (680-681)</a>
+                    <a href="{{ url_for('frontend.read_council', council='1nicea') }}">first council of nicea (325)</a>
+                    <a href="{{ url_for('frontend.read_council', council='1const') }}">first council of constantinople (381)</a>
+                    <a href="{{ url_for('frontend.read_council', council='ephesus') }}">council of ephesus (431)</a>
+                    <a href="{{ url_for('frontend.read_council', council='chalcedon') }}">council of chalcedon (451)</a>
+                    <a href="{{ url_for('frontend.read_council', council='2const') }}">second council of constantinople (553)</a>
+                    <a href="{{ url_for('frontend.read_council', council='3const') }}">third council of constantinople (680-681)</a>
                     <a href="#">council of trullo (quinisext) (692)</a>
                     <a href="#">second council of nicea (787)</a>
                     <a href="#" class="separator">
@@ -65,7 +65,7 @@ Sometimes a man must look for nothing to find everything.
     </div>
 
     <footer>
-        canonlaw.vypr.xyz is made with ❤️ by <a href="https://vypr.xyz">Elliott Pardee</a>.
+        canonlaw.vypr.xyz is made with <span style="color: #b01712">❤️</span> by <a href="https://vypr.xyz">Elliott Pardee</a>.
         <br>
         <a href="{{ url_for('frontend.about') }}">about</a> &middot; <a href="{{ url_for('frontend.disclaimer') }}">disclaimer</a> &middot; <a href="https://github.com/Oikonomia/canon_law">source code</a> &middot; <a href="#">additional resources</a>
     </footer>

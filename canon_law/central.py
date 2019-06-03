@@ -19,9 +19,9 @@
 import os
 import tinydb
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
-
 from canon_law.extensions.vylogger import VyLogger
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
 
 logger = VyLogger("default")
 

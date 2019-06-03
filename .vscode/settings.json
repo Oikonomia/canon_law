@@ -1,4 +1,0 @@
-{
-    "python.pythonPath": "${workspaceFolder}/venv/bin/python",
-    "html.format.wrapLineLength": 0,
-}

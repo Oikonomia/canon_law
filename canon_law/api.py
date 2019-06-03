@@ -43,7 +43,7 @@ def council(name=None, option=None, canon=None):
     query = tinydb.Query()
     results = central.db.search(query.name == name)
 
-    if results == []:
+    if not results:
         return flask.jsonify({
             "ok": False,
             "msg": f"No database entry for '{name}'."
@@ -77,7 +77,7 @@ def council(name=None, option=None, canon=None):
 
             canons = results[0]["canons"]
 
-            if canon > 0 and canon < len(canons):
+            if 0 < canon < len(canons):
                 return flask.jsonify({
                     "ok": True,
                     "obj": canons[canon - 1]

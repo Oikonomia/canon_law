@@ -22,8 +22,8 @@ import flask
 from canon_law import central
 
 
-def create_app(self):
-    app = flask.Flask("rudder_api", instance_relative_config=True)
+def create_app():
+    app = flask.Flask("canon_law", instance_relative_config=True)
 
     try:
         os.makedirs(app.instance_path)
@@ -33,7 +33,5 @@ def create_app(self):
     from . import api, frontend
     app.register_blueprint(api.bp)
     app.register_blueprint(frontend.bp)
-
-    app.logger = central.logger
 
     return app
