@@ -1,5 +1,5 @@
 """
-    Copyright (c) 2018 Elliott Pardee <me [at] vypr [dot] xyz>
+    Copyright (c) 2018-2020 Elliott Pardee <me [at] vypr [dot] xyz>
     This file is part of canon_law.
 
     canon_law is free software: you can redistribute it and/or modify

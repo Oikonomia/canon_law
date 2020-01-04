@@ -142,12 +142,10 @@ tr:nth-child(even) { background-color: #e0e0e0; }
 
 small { font-size: 11px; }
 
-a { color: #009400; }
-a:hover { color: #006400 !important; text-decoration: none; }
-a:focus { color: #006400 !important; text-decoration: none; }
-a:visited { color: #009400; }
-
 a { color: #009400; text-decoration: none; }
 a:hover { color: #006400 !important;  }
 a:focus { color: #006400 !important;  }
 a:visited { color: #009400; }
+
+::selection { background: #111; color: #009400; text-decoration: none; }
+::-moz-selection { background: #111; color: #009400; text-decoration: none; }
