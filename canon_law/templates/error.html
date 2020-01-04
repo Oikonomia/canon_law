@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}error {{ error.code }}{% endblock %}
+
+{% block main %}
+<h1>{{ error.code }}</h1>
+<h3 style="text-align: center;">
+    {% if error.code == 404 %}
+    <img src="{{ url_for('static', filename='phanurius.jpg') }}">
+    <br>
+    You can pray to St. Phanourios to help you find what you are looking for.
+    {% else %}
+    {{ error.description }}
+    {% endif %}
+</h3>
+{% endblock %}

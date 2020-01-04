@@ -18,6 +18,7 @@
 
 import os
 import flask
+import werkzeug
 
 from canon_law import central
 
@@ -33,5 +34,7 @@ def create_app():
     from . import api, frontend
     app.register_blueprint(api.bp)
     app.register_blueprint(frontend.bp)
+
+    app.register_error_handler(werkzeug.exceptions.HTTPException, frontend.error_page)
 
     return app

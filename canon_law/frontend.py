@@ -17,6 +17,7 @@
 """
 
 import flask
+import werkzeug
 import tinydb
 import random
 
@@ -40,7 +41,7 @@ page_titles = {
 def index():
     return flask.render_template("index.html")
 
-
+@bp.route("/c/")
 @bp.route("/c/<council>/")
 def read_council(council=None):
     if council in page_titles.keys():
@@ -75,3 +76,8 @@ def about():
 @bp.route("/disclaimer/")
 def disclaimer():
     return flask.render_template("disclaimer.html")
+
+
+@bp.errorhandler(werkzeug.exceptions.HTTPException)
+def error_page(error):
+    return flask.render_template("error.html", error=error), error.code

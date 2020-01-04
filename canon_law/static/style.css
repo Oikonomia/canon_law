@@ -70,7 +70,7 @@ button:focus {
     color: white !important;
 }
 
-input { padding: 10px; }
+input { padding: 10px; border-radius: -1px; }
 
 header .dropdown-content {
     display: none;
@@ -128,8 +128,7 @@ footer {
 }
 
 table {
-    display: block;
-    margin: 0 auto;
+    display: table-cell;
 }
 
 table, th, td {
