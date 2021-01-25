@@ -9,7 +9,12 @@
 {% autoescape false %}
 <p>
     {% if obj.history %}
-    {{ obj.history }}
+    <div class="clicktoreveal">
+        <h3>click to reveal history</h3>
+    </div>
+    <div id="history">
+        {{ obj.history }}
+    </div>
     {% endif %}
 
     <table>

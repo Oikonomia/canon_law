@@ -29,4 +29,4 @@ Finally, set the FLASK_APP environment variable to `canon_law` by doing `export 
 
 ### Step 3. Launch
 
-Do `flask run` and the service should start up. If it doesn't, please [file an issue](https://github.com/vypr/canon_law/issues/new) so I can get to work. :)
+Do `flask run` and the service should start up. If it doesn't, please [file an issue](https://github.com/oikonomia/canon_law/issues/new) so I can get to work. :)

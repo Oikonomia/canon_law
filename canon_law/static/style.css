@@ -148,3 +148,22 @@ a:visited { color: #009400; }
 
 ::selection { background: #111; color: #009400; text-decoration: none; }
 ::-moz-selection { background: #111; color: #009400; text-decoration: none; }
+
+.clicktoreveal {
+    text-align:center;
+    margin: 0 auto;
+    display: block;
+}
+
+.clicktoreveal h3:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#history {
+    background: #fafafa;
+	display: none;
+	border: 2px solid #c8c8c8;
+    padding: 25px;
+    margin-bottom: 15px;
+}

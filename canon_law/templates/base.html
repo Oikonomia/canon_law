@@ -48,7 +48,9 @@ Sometimes a man must look for nothing to find everything.
 
     <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='style.css') }}" />
     <link rel="shortcut icon" href="{{ url_for('static', filename='logo.png') }}" />
-    <!--<script src="main.js"></script>-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
 </head>
 
 <body>
